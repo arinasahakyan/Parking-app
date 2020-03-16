@@ -1,0 +1,26 @@
+payment = ("Credit Card", "Cash")
+    carddata = ['Name', 'CardNumber', 'ExpirationDate', 'CVVcode']
+    paypaldata = {"username", "password"}
+    answer = 0
+
+    while payment[0] != answer and payment[1] != answer:
+        answer = input("How do you want to pay? \nCredit Card or Cash ")
+
+    if answer == payment[0]:
+        payment = input("Please, input your card's information \nClick enter to continue!")
+        carddata[0] = input("Please, input your name!")
+        carddata[1] = input("Please, input your card number!")
+        carddata[2] = input("Please, input your card's expiration date!")
+        carddata[3] = input("Please, input your card's CVV code!")
+        if len(carddata[3]) != 4:
+            print("Dear", carddata[0], "transaction completed!")
+            time.sleep(1.5)
+            print("The Credit Card details are", "\nCard Number:", carddata[1], "Expiration Date:", carddata[2],
+                  "CVV code:", carddata[3])
+        else:
+            print("Not Valid CVV code")
+    elif answer == payment[1]:
+        print("Please, pay to the waiter!")
+
+    if answer == answer:
+        print("Transaction completed!")
