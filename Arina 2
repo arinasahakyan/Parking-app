@@ -1,0 +1,39 @@
+#User Story 1: As a "parking spot finder", I can see which floor is designed for the time slot that I want to park my car.
+time = ["less than 15 min", "1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "between 5 to 12 hours", "12-24 hours", "more than 24 hours"]
+
+answer = 0
+
+while answer not in time:
+  answer = input("How long would you like to park your car? \n Please choose time interval. " + str(time))
+  if answer not in time:
+    print ("Sorry I don't understand you")
+for hour in time: 
+ if answer == time[0]:
+  print("For cars that want to park for less than 15 minutes, the parking floor is -3. \n Please, go to the floor -3.")
+ else:
+   if answer == time[1]:
+    print("For cars that want to park for 1 hour, the parking floor is -2. \n Please, go to the floor -2.")
+   else:
+     if answer == time[2]:
+      print("For cars that want to park for 2 hours, the parking floor is -1. \n Please, go to the floor -1.")
+     else:
+       if answer == time[3]:
+        print("For cars that want to park for 3 hours, the parking floor is 0. \n Please, go to the floor 0.")
+       else:
+        if answer == time[4]:
+          print("For cars that want to park for 4 hours, the parking floor is 1. \n Please, go to the floor 1.")
+        else:
+          if answer == time[5]:
+            print("For cars that want to park for 5 hours, the parking floor is 2. \n Please, go to the floor 2.")
+          else:
+            if answer == time[6]:
+              print("For cars that want to park for more than 5 hours, the parking floor is 3. \n Please, go to the floor 3.")
+            else:
+              if answer == time[7]:
+                print("For cars that want to park for between 5 to 12 hours, the parking floor is 4. \n Please, go to the floor 4.")
+              else:
+                if answer == time[8]:
+                  print("For cars that want to park for more than 24 hours, the parking floor is 5. \n Please, go to the floor 5.")
+                  break 
+                else:
+                  print("Sorry, I don't understand you \n Please choose less than 15 min, 1 hour, 2 hours, 3 hours, 4 hours, 5 hours, between 5 to 12 hours, 12-24 hours, more than 24 hours")
