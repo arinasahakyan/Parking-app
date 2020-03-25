@@ -1,0 +1,16 @@
+PaymentMethod = ["Credit card" , "Cash"]
+answer = 0
+carddata = ["Name", "CardNumber", "CVVcode"]
+
+while PaymentMethod[0] !=answer and PaymentMethod[1] !=answer:
+  answer = input("Please choose the payment method \n Credit card or cash \n For Credit card press 1 \n For Cash press 2 \n")
+  if answer == ("2"):
+    print("Please use the paying machine \n Thank you")
+    break;
+  
+  if answer == ("1"):
+    carddata[0] = input("Please, input your name! \n")
+    carddata[1] = input("Please, input your card number! \n")
+    carddata[2] = input("Please, input your card's CVV code! \n")
+    print("Dear", carddata[0], "transaction completed!")
+    break;
