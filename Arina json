@@ -1,0 +1,69 @@
+#User Story 1: As a "parking spot finder", I can see which floor is designed for the time slot that I want to park my car
+import json
+
+# a Python object (dict):
+parking_intervals = [
+  {
+    "interval" : "less than 15 min",
+    "floor" : -3
+  },
+  {
+    "interval" : "1 hour",
+    "floor" : -2    
+  },
+  {
+    "interval" : "2 hours",
+    "floor" : -1
+  },
+  {
+    "interval" : "3 hours",
+    "floor" : 0
+  },
+  {
+    "interval" : "4 hours",
+    "floor" : 1
+  },
+  {
+    "interval" : "5 hours",
+    "floor" : 2 
+  },
+  { 
+    "interval" : "more than 5 hours",
+    "floor" : 3 
+  },
+  {
+    "interval" : "betweeen 5 to 12 hours",
+    "floor" : 4
+  },
+  {
+    "interval" : "between 12 to 24 hours",
+    "floor" : 5
+  },
+  {
+    "interval" : "more than 24 hours",
+    "floor" : 6
+  }
+]
+
+y = json.dumps(parking_intervals)
+
+print(y)
+
+available_intervals = ["less than 15 min", "1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "between 5 to 12 hours", "12-24 hours", "more than 24 hours"]
+for curr_interval in parking_intervals:
+  available_intervals.append(curr_interval["interval"])
+
+answer = 0
+
+while answer not in available_intervals:
+  answer = input("How long would you like to park your car? \n Please choose time interval. " + str(available_intervals))
+  if answer not in available_intervals:
+    print ("Sorry I don't understand you")
+
+for curr_interval in parking_intervals: 
+  if answer == curr_interval["interval"]:
+    print("You want to park your car for: ", curr_interval["interval"], ". Please park in ", curr_interval["floor"], "floor.")
+    break
+
+print("Thanks for using the app")
+
