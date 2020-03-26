@@ -18,3 +18,5 @@ if answer == carType[3]:
     
 else:
     print("Type chosen incorrectly") 
+    
+    
