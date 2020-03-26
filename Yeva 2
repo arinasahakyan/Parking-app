@@ -1,0 +1,20 @@
+import random #use Python random package to get random numbers
+
+carType = ["sedan", "suv"] 
+carType.insert(2,"bmw")
+carType.insert(3,"toyota")
+answer=0
+
+while answer not in carType:
+  answer = input("Please Choose Your Car Type: sedan, suv, bmw or toyota?")
+if answer == carType[0]:
+    print("Your parking spot is: ", random.randrange(1, 101, 1))
+if answer == carType[1]:
+    print("Your parking spot is: ", random.randrange(101, 201, 1))
+if answer == carType[2]:
+   print("Your parking spot is", random.randrange(201,301,1))
+if answer == carType[3]:
+   print("Your parking spot is", random.randrange(301,401,1))
+    
+else:
+    print("Type chosen incorrectly") 
